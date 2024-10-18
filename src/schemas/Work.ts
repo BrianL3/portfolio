@@ -1,5 +1,5 @@
 export default interface Work {
-    linkUrl: string;
+    linkUrl?: string;
     imageUrl: string;
     imageDescription: string;
     title: string;

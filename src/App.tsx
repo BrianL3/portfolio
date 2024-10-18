@@ -4,7 +4,7 @@ import TextSection from './components/text-section/TextSection'
 
 function App() {
   const publishedWorks = [{
-    linkUrl: "test-link",
+    linkUrl: "istock-app",
     imageUrl: "test-image-url",
     imageDescription: 'test-image-description',
     title: "iStock",

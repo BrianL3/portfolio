@@ -3,7 +3,7 @@
 import { FC } from 'react';
 
 interface CardProps {
-  linkUrl: string;
+  linkUrl?: string;
   imageUrl: string;
   imageDescription: string;
   title: string;
