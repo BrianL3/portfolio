@@ -23,13 +23,15 @@ const WorksSection: FC<WorksSectionProps> = ({
         <h2 className="mzp-u-title-md">{sectionTitle}</h2>
         <p style={{ marginBottom: '4rem' }}>{sectionDetailText}</p>
         <div className="mzp-l-card-third">
-          {works.map((work) => (
+          {works.map((work, index) => (
             <Card
               linkUrl={work.linkUrl}
               imageUrl={work.imageUrl}
               imageDescription={work.imageDescription}
               title={work.title}
-              detailText={work.detailText} />
+              detailText={work.detailText}
+              key={work.title + index}
+            />
           ))}
         </div>
       </div>
