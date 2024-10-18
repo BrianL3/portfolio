@@ -1,0 +1,19 @@
+.textsection-card {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 1rem;
+    border: 2px solid #e1411e;
+    border-radius: 0.5rem;
+    text-align: center;
+    margin: 2rem 0;
+  }
+  
+  .textsection-detailtext {
+    font-size: 1.2rem;
+  }
+  
+  .textsection-tagline {
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+  
