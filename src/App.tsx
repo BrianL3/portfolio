@@ -5,17 +5,17 @@ import TextSection from './components/text-section/TextSection'
 function App() {
   const publishedWorks = [{
     linkUrl: "istock-app",
-    imageUrl: "test-image-url",
-    imageDescription: 'test-image-description',
-    title: "iStock",
-    detailText: ''
+    imageUrl: import.meta.env.BASE_URL+"/istock-app/app-icon.png",
+    imageDescription: "iStock's app icon",
+    title: "iStock by Getty",
+    detailText: "The iStock brand's asset storefront for iOS devices."
   },
   {
-    linkUrl: "test-link",
-    imageUrl: "test-image-url",
+    linkUrl: "releases",
+    imageUrl: import.meta.env.BASE_URL+"/releases-app/app-icon.png",
     imageDescription: 'test-image-description',
-    title: "Getty Images",
-    detailText: ''
+    title: "Releases",
+    detailText: 'Getty Images Releases is a free all-in-one digital release management app for Getty Images and iStock creators that lets you create, complete, and manage all of your model and property releases on your smart phone or mobile device. Releases enables creators to move off paper release forms and adopt a 100% digital release workflow. Create a new model or property release, have the model or property agent complete and sign it right there on your device, and then save it.'
   },
   {
     linkUrl: "test-link",
@@ -41,7 +41,7 @@ function App() {
 ]
 
   return (
-    <>
+    <div className="mzp-l-content mzp-t-content-xl">
       <TextSection
         title={"Hi, I'm Brian"}
         textblocks={[
@@ -55,7 +55,7 @@ function App() {
         sectionTitle={'Published Works'}
         sectionDetailText={'I made these for various organizations'}
         works={publishedWorks} />
-    </>
+    </div>
   )
 }
 

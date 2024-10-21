@@ -18,22 +18,17 @@ const Card: FC<CardProps> = ({
   detailText
 }: CardProps) => {
   return (
-    <section className="mzp-c-card mzp-c-card-extra-small has-aspect-3-2">
-      <a className="mzp-c-card-block-link" href={linkUrl}>
-        <div className="mzp-c-card-media-wrapper">
-          <img
-            className="mzp-c-card-image"
-            src={imageUrl}
-            alt={imageDescription}
-            style={{ height: '220px', objectFit: 'cover' }}
-          />
+    <div className="mzp-t-picto-side">
+      <div style={{ display: "flex", flexDirection: "row", alignItems: 'center' }}>
+        <a href={linkUrl}><img style={{borderRadius: 8}} src={imageUrl} width="128" height="128" alt={imageDescription} /></a>
+        <div style={{ display: 'flex', flexDirection: 'column', marginLeft: 16 }}>
+          <h3 style={{ display: 'flex', justifyContent: 'left' }}>{title}</h3>
+          <div className="mzp-c-picto-body">
+            <p>{detailText} <a href={linkUrl}>Check it out!</a></p>
+          </div>
         </div>
-        <div className="mzp-c-card-content">
-          <h2 className="mzp-c-card-title">{title}</h2>
-          <p className="mzp-c-card-meta">{detailText}</p>
-        </div>
-      </a>
-    </section>
+      </div>
+    </div>
   );
 }
 

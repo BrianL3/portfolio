@@ -1,31 +1,28 @@
 import { FC } from 'react';
-import Card from '../card/Card';
 import Work from '../../schemas/Work';
+import MobileScreenCard from '../card/MobileScreenCard';
 
-interface WorksSectionProps {
+interface MobileScreenSectionProps {
   sectionTitle: string;
   sectionDetailText: string;
   works: Work[];
 }
 
-const WorksSection: FC<WorksSectionProps> = ({
+const MobileScreenSection: FC<MobileScreenSectionProps> = ({
   sectionTitle,
   sectionDetailText,
   works
-}: WorksSectionProps) => {
+}: MobileScreenSectionProps) => {
 
   return (
     <section
-      id="locations"
       style={{ padding: '2rem 0' }}
     >
       <div className="mzp-l-content mzp-t-content-xl">
-        <h2 className="mzp-u-title-md">{sectionTitle}</h2>
-        <p style={{ marginBottom: '4rem' }}>{sectionDetailText}</p>
-      </div>
-      {works.map((work, index) => (
-            <Card
-              linkUrl={work.linkUrl}
+        <h2> {sectionTitle}</h2>
+        <p style={{ marginBottom: '4rem', justifyContent: 'start', textAlign: 'left' }}>{sectionDetailText}</p>
+        {works.map((work, index) => (
+            <MobileScreenCard
               imageUrl={work.imageUrl}
               imageDescription={work.imageDescription}
               title={work.title}
@@ -33,8 +30,9 @@ const WorksSection: FC<WorksSectionProps> = ({
               key={work.title + index}
             />
           ))}
+      </div>
     </section>
   );
 };
 
-export default WorksSection;
+export default MobileScreenSection;
