@@ -2,8 +2,8 @@
     display: flex;
     flex-flow: column nowrap;
     padding: 1rem;
-    border: 2px solid #4679df;
-    background-color: #4679df;
+    border: 2px solid rgb(189, 196, 209);
+    background-color: rgb(133, 139, 148);
     border-radius: 0.5rem;
     text-align: center;
     margin: 2rem 0;

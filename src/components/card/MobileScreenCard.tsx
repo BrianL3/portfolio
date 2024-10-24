@@ -10,18 +10,6 @@ interface MobileScreenCardProps {
   detailText: string;
 }
 
-interface ImgProps {
-  left: string;
-  width: string;
-}
-
-const Img = styled.img<ImgProps>((props) => ({
-  objectFit: "cover",
-  left: `${props.left} !important`,
-  width: `${props.width} !important`,
-  height: "100%",
-}));
-
 const MobileScreenCard: FC<MobileScreenCardProps> = ({
   imageUrl,
   imageDescription,
@@ -31,21 +19,18 @@ const MobileScreenCard: FC<MobileScreenCardProps> = ({
 
   const isLargeScreen = useMediaQuery(`(min-width: ${screenWidths.tablet})`);
   const displayDirection = isLargeScreen ? 'row' : 'column'
+  
   return (
-    <section className="mzp-c-card mzp-c-card-medium mzp-has-aspect-16-9">
-      <div className="mzp-c-card-block-link" style={{display: 'flex', flexDirection: displayDirection}}>
-        <div className="mzp-c-card-media-wrapper">
-            <Img
-              className="mzp-c-card-image"
-              src={imageUrl}
-              width={"60%"}
-              left={"40%"}
-              alt={imageDescription}
-            />
-        </div>
-        <div className="mzp-c-card-content">
-          <h2 className="mzp-c-card-title">{title}</h2>
-          <p className="mzp-c-card-desc" style={{textAlign: 'left'}}>{detailText}</p>
+    <section style={{ marginBottom: '4rem' }}>
+      <div style={{ display: 'flex', flexDirection: displayDirection }}>
+        <img
+          src={imageUrl}
+          style={{maxHeight: isLargeScreen ? 490 : "100%", objectFit:'contain'}}
+          alt={imageDescription}
+        />
+        <div>
+          <h2 style={{ textAlign: 'left', marginLeft: "1rem" }}>{title}</h2>
+          <p className="mzp-c-card-desc" style={{ textAlign: 'left', marginLeft: "1rem" }}>{detailText}</p>
         </div>
       </div>
     </section>

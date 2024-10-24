@@ -19,7 +19,7 @@ const MobileScreenSection: FC<MobileScreenSectionProps> = ({
       style={{ padding: '2rem 0' }}
     >
       <div className="mzp-l-content mzp-t-content-xl">
-        <h2> {sectionTitle}</h2>
+        <h2 style={{textAlign:"left"}}> {sectionTitle}</h2>
         <p style={{ marginBottom: '4rem', justifyContent: 'start', textAlign: 'left' }}>{sectionDetailText}</p>
         {works.map((work, index) => (
             <MobileScreenCard
