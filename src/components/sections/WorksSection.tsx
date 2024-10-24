@@ -16,7 +16,6 @@ const WorksSection: FC<WorksSectionProps> = ({
 
   return (
     <section
-      id="locations"
       style={{ padding: '2rem 0' }}
     >
       <div className="mzp-l-content mzp-t-content-xl">

@@ -15,14 +15,14 @@ function App() {
     imageUrl: import.meta.env.BASE_URL+"/releases-app/app-icon.png",
     imageDescription: 'test-image-description',
     title: "Releases",
-    detailText: 'Getty Images Releases is a free all-in-one digital release management app for Getty Images and iStock creators that lets you create, complete, and manage all of your model and property releases on your smart phone or mobile device. Releases enables creators to move off paper release forms and adopt a 100% digital release workflow. Create a new model or property release, have the model or property agent complete and sign it right there on your device, and then save it.'
+    detailText: 'Getty Images Releases is a free all-in-one digital release management app for Getty Images and iStock creators that lets you create, complete, and manage all of your model and property releases on your phone. Releases enables creators to adopt a 100% digital release workflow. Create a new model or property release, have the model or property agent complete and sign it right there on your device.'
   },
   {
     linkUrl: "test-link",
     imageUrl: "test-image-url",
     imageDescription: 'test-image-description',
-    title: "Releases",
-    detailText: ''
+    title: "Getty on iOS",
+    detailText: 'Designed for creative and media professionals, and photography enthusiasts everywhere. Search, save and share our spectacular collection of creative, editorial and archival imagery and video — wherever and whenever you want.'
   },
   {
     linkUrl: "test-link",

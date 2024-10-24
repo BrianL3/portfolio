@@ -17,14 +17,16 @@ const TextSection: FC<TextSectionProps> = ({
 }: TextSectionProps) => {
   return (
     <section
+      id="locations"
       className="mzp-l-content mzp-t-content-lg"
-      style={{ marginTop: '4rem', marginBottom: '4rem' }}
+      style={{ paddingTop: '4rem', paddingBottom: '4rem' }}
     >
       <h2 className="mzp-u-title-md" style={{ textAlign: 'center' }}>
         {title}
       </h2>
+      <div style={{height:30}}/>
       {textblocks.map((section, index) => (
-        <div key={index} className="textsection-card">
+        <div key={index} className="textsection-card" style={{backgroundColor: '-moz-initial'}}>
           <div className="textsection-detailtext">
             <p>{section.detailText}</p>
           </div>
