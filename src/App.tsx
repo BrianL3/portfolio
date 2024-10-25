@@ -10,14 +10,14 @@ function App() {
         title={"Hi, I'm Brian"}
         textblocks={[
           {
-            detailText: 'Broad experience across mobile and web frontend technologies',
+            detailText: 'I have experience across a broad range of mobile and web frontend technologies: Swift, React Native, JavaScript, Node, TypeScript, and Kotlin.',
             tagline: "And I'm ready to build."
           }
         ]}
       />
       <WorksSection
         sectionTitle={'Published Works'}
-        sectionDetailText={'I made these for various organizations'}
+        sectionDetailText={'Explore a selection of projects that showcase my contributions across various organizations. Whether through professional endeavors or open-source collaborations, each work reflects my commitment to innovation and quality in software development.'}
         works={publishedWorks} />
     </div>
   )
