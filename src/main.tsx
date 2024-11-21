@@ -4,7 +4,7 @@ import App from './App.tsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './index.css'
 import MobileScreenSection from './components/sections/MobileScreenSection.tsx'
-import { istock, releases, gettyIOS, cdp } from './data/PublishedWork.ts'
+import { istock, releases, gettyIOS, cdp, aas } from './data/PublishedWork.ts'
 
 
 createRoot(document.getElementById('root')!).render(
@@ -23,6 +23,9 @@ createRoot(document.getElementById('root')!).render(
         />} />
         <Route path='cdp' element={
           <MobileScreenSection sectionTitle={'Council Data Project'} sectionDetailText={'Council Data Project (CDP) is an open-source project dedicated to providing journalists, activists, researchers, and all members of each community we serve with the tools they need to stay informed and hold their council members accountable. By combining and simplifying sources of information on council meetings and actions, CDP ensures that everyone is empowered to participate in local government.'} works={cdp}
+        />} />
+        <Route path='aas' element={
+          <MobileScreenSection sectionTitle={'Android Asset Storefronts'} sectionDetailText={'Our team created an asset storefront for iStock and Getty with a shared codebase in 2022. The code is in Kotlin, without Jetpack. It utilizes app flavors to create two apps with very similar feature sets.'} works={aas}
         />} />
       </Routes>
     </BrowserRouter>

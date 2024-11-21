@@ -20,7 +20,7 @@ const MobileScreenCard: FC<MobileScreenCardProps> = ({
   const displayDirection = isLargeScreen ? 'row' : 'column'
   
   return (
-    <section style={{ marginBottom: '4rem' }}>
+    <section style={{ marginBottom: '4rem', display: 'flex', justifyContent: 'center' }}>
       <div style={{ display: 'flex', flexDirection: displayDirection }}>
         <img
           src={imageUrl}

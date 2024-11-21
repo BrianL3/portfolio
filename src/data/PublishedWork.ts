@@ -1,26 +1,26 @@
 const istock = [{
     imageUrl: import.meta.env.BASE_URL+ "/istock-app/1.png",
-    imageDescription: 'test-image-description',
-    title: "stuff",
-    detailText: 'this is a screen'
+    imageDescription: 'istock ios app homepage',
+    title: "Home",
+    detailText: 'iStock was written before SwiftUI. All image grids you see are custom-made. The home page tracks user\'s recent searches, so they can start back right where they left off. It also provides a showcase of curated sets of photos.'
   },
   {
     imageUrl: import.meta.env.BASE_URL+ "/istock-app/2.png",
-    imageDescription: 'test-image-description',
-    title: "things",
-    detailText: 'this is a screen'
+    imageDescription: 'istock user feed controls',
+    title: "Customers First",
+    detailText: 'The app has a number of features to improve a customer\'s experience. They can see recently viewed images and searches, save great pictures to \"boards\", and even follow their favorite artists.'
   },
   {
     imageUrl: import.meta.env.BASE_URL+ "/istock-app/3.png",
-    imageDescription: 'test-image-description',
-    title: "cosas",
-    detailText: 'this is a screen'
+    imageDescription: 'istock search',
+    title: "Search",
+    detailText: "iStock\'s catalogue is vast. Our search feature leverages a REST API to help narrow the field to what you\'re looking for. There's even a search-by-image function if you already have something close to what you want - it uses S3 storage buckets to temporarily house an uploaded image."
   },
   {
     imageUrl: import.meta.env.BASE_URL+ "/istock-app/4.png",
-    imageDescription: 'test-image-description',
-    title: "more stuff",
-    detailText: 'this is a screen'
+    imageDescription: 'rotating curated sets',
+    title: "Curation by Experts",
+    detailText: "iStock has amazing imagery, and the company has experts who curate images into sets based on trends in the marketplace. We leverage that work in the app, making sure that the front page has fresh offerings for people browsing for inspiring imagery."
   },
 ]
 const releases = [
@@ -34,7 +34,7 @@ const releases = [
     imageUrl: import.meta.env.BASE_URL+ "/releases-app/3.png",
     imageDescription: 'test-image-description',
     title: "Form Validation",
-    detailText: 'Forms are validated in data stores. Here, we use a red underscore top notify the user that a field is in need of correction.'
+    detailText: 'Forms are validated in data stores - this is an important separation of concerns so that any validators can be unit-tested. Here, we use a red underscore top notify the user that a field is in need of correction.'
   },
   {
     imageUrl: import.meta.env.BASE_URL+ "/releases-app/2.png",
@@ -90,24 +90,64 @@ const gettyIOS = [
 ]
 
 const cdp = [
+  
   {
-    imageUrl: import.meta.env.BASE_URL+ "/cdp/search.png",
-    imageDescription: 'test-image-description',
-    title: "Providing Searchability",
+    imageUrl: import.meta.env.BASE_URL+ "/cdp/cdp-events.png",
+    imageDescription: 'CDP screenshot of event tracking',
+    title: "Event Tracking",
     detailText: 'Pick any phrase and search through timestamped transcripts.'
   },
   {
-    imageUrl: import.meta.env.BASE_URL+ "/cdp/track.png",
+    imageUrl: import.meta.env.BASE_URL+ "/cdp/cdp-legislation-tracking.png",
+    imageDescription: 'CDP screenshot of legislation history tracker',
+    title: "Stay on Top of Local Legislation",
+    detailText: 'Pick any phrase and search through timestamped transcripts.'
+  },
+  {
+    imageUrl: import.meta.env.BASE_URL+ "/cdp/cdp-search.png",
     imageDescription: 'test-image-description',
     title: "Providing Trackability",
     detailText: 'Track legislation you care about through the council process.'
   },
   {
-    imageUrl: import.meta.env.BASE_URL+ "/cdp/voting-history.png",
+    imageUrl: import.meta.env.BASE_URL+ "/cdp/cdp-searchable-transcripts.png",
     imageDescription: 'test-image-description',
     title: "Providing Accountability",
     detailText: 'Access full voting records and contact info of each council member.'
-  }
+  },
+  {
+    imageUrl: import.meta.env.BASE_URL+ "/cdp/cdp-accountability.png",
+    imageDescription: 'test-image-description',
+    title: "Providing Accountability",
+    detailText: 'Pick any phrase and search through timestamped transcripts.'
+  },
+]
+
+const aas = [
+  {
+    imageUrl: import.meta.env.BASE_URL+ "/aas/home-screen.png",
+    imageDescription: 'android app home',
+    title: "Home",
+    detailText: 'Access full voting records and contact info of each council member.'
+  },
+  {
+    imageUrl: import.meta.env.BASE_URL+ "/aas/boards.png",
+    imageDescription: 'android app boards',
+    title: "Save Faves",
+    detailText: 'Something about boards.'
+  },
+  {
+    imageUrl: import.meta.env.BASE_URL+ "/aas/curated-set.png",
+    imageDescription: 'android app curated',
+    title: "Stay on Top of Local Legislation",
+    detailText: 'Pick any phrase and search through timestamped transcripts.'
+  },
+  {
+    imageUrl: import.meta.env.BASE_URL+ "/aas/editorial-search.png",
+    imageDescription: 'android app search',
+    title: "Providing Trackability",
+    detailText: 'Track legislation you care about through the council process.'
+  },
 ]
 
 
@@ -134,7 +174,7 @@ const publishedWorks = [{
   detailText: 'Designed for creative and media professionals, and photography enthusiasts everywhere. Search, save and share our spectacular collection of creative, editorial and archival imagery and video — wherever and whenever you want.'
 },
 {
-  linkUrl: "test-link",
+  linkUrl: "aas",
   imageUrl: import.meta.env.BASE_URL+"imgs/android_robot.png",
   imageDescription: 'test-image-description',
   title: "Getty/iStock Android",
@@ -145,14 +185,14 @@ const publishedWorks = [{
   imageUrl: import.meta.env.BASE_URL+"imgs/cdp-icon.png",
   imageDescription: 'test-image-description',
   title: "Council Data Project",
-  detailText: 'An open-source search engine for local government. We aim to empower journalists, activists, and community members in following council action by combining and simplifying sources of information on municipal council meetings and actions.'
+  detailText: 'An open-source search engine for local government. We aim to empower journalists, activists, and community members in following council action by combining and simplifying sources of information on municipal council meetings and actions. I contributed to the frontend development of this project, and am co-author of a publication in the Journal of Open Source software.'
 },
 {
-  linkUrl: "test-link",
+  linkUrl: "",
   imageUrl: import.meta.env.BASE_URL+"imgs/identity-icon.png",
   imageDescription: 'portfolio site icon',
   title: "My Portfolio",
   detailText: " This portfolio site, built with React and Vite, showcases my work and skills as a web developer. Explore my projects, learn about my journey, and see how I approach problem-solving in the tech landscape. The source code is available on GitHub for those interested in the development process!"
 },
 ]
-  export { cdp, istock, releases, gettyIOS, publishedWorks}
+  export { cdp, istock, releases, gettyIOS, publishedWorks, aas}
