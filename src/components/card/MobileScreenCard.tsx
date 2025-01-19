@@ -1,6 +1,7 @@
 import { FC } from "react";
 import useMediaQuery from "../../util/MediaQuery";
 import { screenWidths } from "../../util/MediaBreakpoints";
+import ScalableImage from "../general/ScalableImage";
 
 interface MobileScreenCardProps {
   imageUrl: string;
@@ -22,10 +23,9 @@ const MobileScreenCard: FC<MobileScreenCardProps> = ({
   return (
     <section style={{ marginBottom: '4rem', display: 'flex', justifyContent: 'center' }}>
       <div style={{ display: 'flex', flexDirection: displayDirection }}>
-        <img
-          src={imageUrl}
-          style={{maxHeight: isLargeScreen ? 490 : "100%", objectFit:'contain'}}
-          alt={imageDescription}
+        <ScalableImage
+          imageUrl={imageUrl}
+          imageDescription={imageDescription}
         />
         <div>
           <h2 style={{ textAlign: 'left', marginLeft: "1rem" }}>{title}</h2>
@@ -35,5 +35,4 @@ const MobileScreenCard: FC<MobileScreenCardProps> = ({
     </section>
   );
 };
-
 export default MobileScreenCard;
