@@ -2,6 +2,7 @@ import { FC } from 'react';
 import Work from '../../schemas/Work';
 import MobileScreenCard from '../card/MobileScreenCard';
 import { Container } from '@mui/material';
+import BackButton from '../general/BackButton';
 
 interface MobileScreenSectionProps {
   sectionTitle: string;
@@ -18,7 +19,10 @@ const MobileScreenSection: FC<MobileScreenSectionProps> = ({
   return (
     <Container sx={{ ...styles.container }}>
       <div className="mzp-l-content mzp-t-content-xl">
-        <h2 style={{textAlign:"left"}}> {sectionTitle}</h2>
+        <div style={{ display: 'flex', flexDirection: 'row' }}>
+          <BackButton/>
+          <h2 style={{textAlign:"left"}}> {sectionTitle}</h2>
+        </div>
         <p style={{ marginBottom: '4rem', justifyContent: 'start', textAlign: 'left' }}>{sectionDetailText}</p>
         {works.map((work, index) => (
             <MobileScreenCard
