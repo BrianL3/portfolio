@@ -1,59 +1,51 @@
-import { Box } from '@mui/material'
-import './App.css'
-import HeroCarousel from './components/card/HeroCarousel'
-import WorksSection from './components/sections/WorksSection'
-import { publishedWorks } from './data/PublishedWork'
+import { Box, Container, CssBaseline } from '@mui/material';
+import HeroCarousel from './components/card/HeroCarousel';
+import WorksSection from './components/sections/WorksSection';
+import { publishedWorks } from './data/PublishedWork';
 
 function App() {
   return (
-    <Box
-      sx={{...styles.container}}
-    >
-      <Box sx={{ ...styles.box, ...styles.heroBox }}>
-        <div style={{ flex: 1 }}/>
-        <HeroCarousel />
-        <div style={{ flex: 1 }}/>
+    <>
+      <CssBaseline />
+      <Box sx={{ ...styles.appContainer }}>
+        <Box sx={styles.heroSection}>
+          <HeroCarousel />
+        </Box>
+        <Container maxWidth="lg" sx={styles.contentContainer}>
+          <WorksSection
+            sectionTitle="Published Works"
+            sectionDetailText="Explore a selection of projects that showcase my contributions across various organizations. Whether through professional endeavors or open-source collaborations, each work reflects my commitment to innovation and quality in software development."
+            works={publishedWorks}
+          />
+        </Container>
       </Box>
-      <WorksSection
-        sectionTitle={'Published Works'}
-        sectionDetailText={'Explore a selection of projects that showcase my contributions across various organizations. Whether through professional endeavors or open-source collaborations, each work reflects my commitment to innovation and quality in software development.'}
-        works={publishedWorks} />
-    </Box>
-  )
+    </>
+  );
 }
 
-export default App
+export default App;
 
 const styles = {
-  container: {
+  appContainer: {
     display: "flex",
-    flexDirection: 'column',
+    flexDirection: "column",
+    minHeight: "100vh",
     backgroundColor: "rgb(252, 252, 252)",
-    position: "fixed",
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    overflow: "auto",
+  },
+  heroSection: {
     width: "100%",
-    height: "100%",
-    maxWidth: 1180,
+    minHeight: "50vh",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "rgb(240, 240, 240)",
+    boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
+    padding: "16px",
+    flexGrow: 1,
   },
-  box: {
-    flex: 1,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-
+  contentContainer: {
+    flexGrow: 1,
+    paddingY: { xs: 4, md: 6 },
+    textAlign: "center",
   },
-  heroBox: {
-    marginTop: "12px",
-    minHeight: 480,
-    // maxWidth: 480,
-    // width: {md: "100%", lg: "480px"},
-    // flex: 1,
-    // height: "100%",
-    // padding: "10px 0"
-  }
-}
-
+};

@@ -26,48 +26,53 @@ export default function HeroCarousel() {
 
     return (
         <Container sx={{ ...styles.container, backgroundImage: `url(${heroUrlString})` }}>
-            <div style={{ height: "10%" }} />
-            <Typography
-                variant="h4"
-                sx={{...styles.text}} >
+            <div style={styles.topTextContainer}>
+                <Typography variant="h4" sx={styles.text}>
                     Hi, I'm Brian
                 </Typography>
-            <div style={{ flex: 1 }} />
-            <Typography variant="h4" sx={{...styles.text}} >and I love to build</Typography>
-            {activeStep < 4 && <Typography variant="h4" sx={{...styles.text}}>in {stuffICanBuild[activeStep]}</Typography>}
-            <MobileStepper
-                variant="dots"
-                steps={numberOfHeroes}
-                position="static"
-                activeStep={activeStep}
-                sx={styles.stepper}
-                nextButton={<div />}
-                backButton={<div />}
-            />
-            
+            </div>
+            <div style={{flexGrow: 1, flex: 1}} />
+            <div style={styles.bottomTextContainer}>
+                <Typography variant="h4" sx={styles.text}>
+                    and I love to build
+                </Typography>
+                {activeStep < 4 && (
+                    <Typography variant="h4" sx={styles.text}>
+                        in {stuffICanBuild[activeStep]}
+                    </Typography>
+                )}
+            </div>
         </Container>
     );
 }
 const styles = {
+    topTextContainer: {
+        width: "100%",
+        display: "flex",
+        justifyContent: "center",
+        marginTop: "10px",
+    },
+    bottomTextContainer: {
+        width: "100%",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        marginBottom: "10px",
+    },
     container: {
-        borderRadius: "25px",
-        backgroundSize: 'cover',
-        maxWidth: 480,
-        height: "100%",
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center',
-    },
-    stepper: {
-        // maxWidth: 400,
-        flexGrow: 1,
-        maxHeight: 25,
-        bgcolor: 'transparent',
-        color: 'white'
+        maxWidth: 480,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        height: "50vh", // Ensure non-zero height
+        backgroundColor: "rgba(0, 0, 0, 0.1)", // Prevent blending issues
     },
     text: {
         color: "white",
         WebkitTextStroke: '1px black', // Adds a 1px black border to the text
         textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)', // Optional: adds a shadow for extra contrast
-    }
+    },
+    
 }
