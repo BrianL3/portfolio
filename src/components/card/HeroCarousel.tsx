@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Container, MobileStepper, Typography } from '@mui/material'
+import { Container, Typography } from '@mui/material'
 
 export default function HeroCarousel() {
     const [activeStep, setActiveStep] = React.useState(0);
@@ -55,7 +55,7 @@ const styles = {
     bottomTextContainer: {
         width: "100%",
         display: "flex",
-        flexDirection: "column",
+        flexDirection: "column" as "column",
         alignItems: "center",
         marginBottom: "10px",
     },
